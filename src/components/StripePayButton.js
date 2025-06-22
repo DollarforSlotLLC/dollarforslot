@@ -1,6 +1,6 @@
 import { loadStripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe("pk_test_YOUR_PUBLISHABLE_KEY");
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 export default function StripePayButton({ priceId }) {
   const handleClick = async () => {
