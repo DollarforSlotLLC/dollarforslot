@@ -1,8 +1,7 @@
 import { loadStripe } from "@stripe/stripe-js";
 
-console.log("⚡ Stripe env key:", process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+// TEMP DEV MODE: Hardcoded test key (do not use in production)
+const stripePromise = loadStripe("pk_test_51RZJc6Ej65vMkhZL37huCvyA77Zwe0JYru9eU81IrKi3U0TEutaOjeAaUP6Fkg7BbOHh1K0pRFVfGUQaRAJDfc0I00ADOlPx0c");
 
 export default function StripePayButton({ priceId }) {
   const handleClick = async () => {
